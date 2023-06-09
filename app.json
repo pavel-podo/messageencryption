@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "textInc",
-    "slug": "textInc",
-    "version": "1.0.0",
+    "name": "message encryption",
+    "slug": "message-encryption",
+    "version": "0.0.2",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/mail_lock.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/mail_lock.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +21,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/mail_lock.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.pavelpo.messageencryption",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "aa8976a0-f393-45ce-afc1-8054b902a900"
+      }
     }
   }
 }

@@ -1,0 +1,3 @@
+export const THEME_NUMBER = 'THEME_NUMBER';
+export const LANG_NUMBER = 'LANG_NUMBER';
+export const ALPHABET_NUMBER = 'ALPHABET_NUMBER'; 
