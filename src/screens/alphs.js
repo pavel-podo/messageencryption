@@ -1,8 +1,13 @@
 export const alphs = [
     {
-        title: 'Русский',
+        title: 'Восточно-Украинский',
         text: `«’»\\'!"#€$%&()*+,-–./0123456789:;<=>? @ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{|}~АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя\n`,
         key:'RU',
+    },
+    {
+        title: 'Українська',
+        text: `«’»\\'!"#€$%&()*+,-–./0123456789:;<=>? @ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{|}~АаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя\n`,
+        key:'UA'
     },
     {
         title: 'English ',
@@ -54,11 +59,7 @@ export const alphs = [
         text: `«’»\\'!"#€$%&()*+,-–./0123456789:;<=>? @ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{|}~ÆæØøÅåÉé\n`,
         key:'DKNO'
     },
-    {
-        title: 'Українська',
-        text: `«’»\\'!"#€$%&()*+,-–./0123456789:;<=>? @ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{|}~АаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя\n`,
-        key:'UA'
-    },
+   
 ]
 
 
