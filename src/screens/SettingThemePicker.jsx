@@ -1,7 +1,8 @@
 import React from "react";
-import { StyleSheet, View, Text, AsyncStorage } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { Picker } from '@react-native-picker/picker';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
@@ -15,20 +16,20 @@ export const SettingTemePicker = (prop) => {
   const langI = useSelector((state) => state.intLangReducer.langNumber);
   const theme = themes[themeI]
   const lang = langs[langI]
-  const setLockalThemNumber = async (n) => {
-    try {
-      await AsyncStorage.setItem(
-        'themNumber',
-        String(n),
-      );
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // const setLockalThemNumber = async (n) => {
+  //   try {
+  //     await AsyncStorage.setItem(
+  //       'themNumber',
+  //       String(n),
+  //     );
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
   const dispatch = useDispatch();
   const changeLang = (value, index) => {
     dispatch(themeNumberActuion(index))
-    setLockalThemNumber(index)
+    // setLockalThemNumber(index)
     navigation.setOptions({
       headerStyle: {
         backgroundColor: themes[value].header_color

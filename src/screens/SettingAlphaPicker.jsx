@@ -1,5 +1,7 @@
 import React from "react";
-import { StyleSheet, View, Text,AsyncStorage } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { useDispatch, useSelector } from "react-redux";
 import { Picker } from '@react-native-picker/picker';
 
@@ -13,17 +15,18 @@ export const SettingAlphaPicker = () => {
   const theme = themes[themeI]
   const alph = alphs[alphI]
   const lang = langs[langI]
-  const setLockalAlphNumber  = async (n) => {
-    try {
-        await AsyncStorage.setItem(
-            'alphNumber',
-            String(n),
-        );
-    } catch (error) {
-        console.log(error)
-    }
+//   const setLockalAlphNumber  = async (n) => {
+    
+//     try {
+//         await AsyncStorage.setItem(
+//             'alphNumber',
+//             String(n),
+//         );
+//     } catch (error) {
+//         console.log(error)
+//     }
 
-}
+// }
 
 
 
@@ -31,7 +34,7 @@ export const SettingAlphaPicker = () => {
   const dispatch = useDispatch();
   const changeLang = (value, index) => {
     dispatch(alphabetNumberActuion(index))
-    setLockalAlphNumber(index)
+    // setLockalAlphNumber(index)
   }
 
   return (
@@ -56,12 +59,12 @@ export const SettingAlphaPicker = () => {
           }
         </Picker>
       </View>
-      <View style = {styles.validСharsBlock}>
-        <Text style = {{...styles.validСharsTitle,color:theme.second_font_color}}>
+      <View style = {styles.validcharsBlock}>
+        <Text style = {{...styles.validcharsTitle,color:theme.second_font_color}}>
           {lang.allowedCharacters}
         </Text>
         <Text
-        style = {{...styles.validСhars,backgroundColor:theme.second_color}}>{alph.text}</Text>
+        style = {{...styles.validchars,backgroundColor:theme.second_color}}>{alph.text}</Text>
       </View>
     </View>
   );
@@ -100,18 +103,18 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     alignItems:'center',
   },
-  validСharsBlock:{
+  validcharsBlock:{
     alignItems:'center',
 
   },
-  validСhars:{
+  validchars:{
     textAlign:'center',
     //width:'30%',
     marginHorizontal:20,
     padding:10,
     borderRadius:8,
   },
-  validСharsTitle:{
+  validcharsTitle:{
     marginBottom:12
   }
 

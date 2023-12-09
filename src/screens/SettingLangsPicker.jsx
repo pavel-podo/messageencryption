@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, View, Text,AsyncStorage } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { Picker } from '@react-native-picker/picker';
 
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 import { langNumberActuion } from '../store/actions/langNumberActuion'
@@ -14,21 +15,21 @@ export const SettingLangsPicker = () => {
   const theme = themes[themeI]
   const lang = langs[langI]
   console.log('tttt',typeof themeI )
-  const setLockalLangNumber  = async (n) => {
-    try {
-        await AsyncStorage.setItem(
-            'langNumber',
-            String(n),
-        );
-    } catch (error) {
-        console.log(error)
-    }
+//   const setLockalLangNumber  = async (n) => {
+//     try {
+//         await AsyncStorage.setItem(
+//             'langNumber',
+//             String(n),
+//         );
+//     } catch (error) {
+//         console.log(error)
+//     }
 
-}
+// }
 
   const dispatch = useDispatch();
   const changeLang = (value, index) => {
-    setLockalLangNumber(index)
+    // setLockalLangNumber(index)
     dispatch(langNumberActuion(index))
   }
 

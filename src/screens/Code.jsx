@@ -81,7 +81,7 @@ export default function Code(prop) {
         if (badSymbol) {
             console.log(badSymbol)
             ToastAndroid.show(
-                `${lang.invalidЕextСharacter}  
+                `${lang.invalidEextCharacter}  
 ${badSymbol}
 # - ${badSymbol.charCodeAt(0)}, 
 ${lang.checkValidCharacters}`, ToastAndroid.LONG);

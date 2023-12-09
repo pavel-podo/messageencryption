@@ -2,7 +2,7 @@
   "expo": {
     "name": "message encryption",
     "slug": "message-encryption",
-    "version": "0.0.2",
+    "version": "0.0.5",
     "orientation": "portrait",
     "icon": "./assets/mail_lock.png",
     "splash": {
@@ -25,7 +25,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.pavelpo.messageencryption",
-      "versionCode": 1
+      "versionCode": 12
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,6 +34,18 @@
       "eas": {
         "projectId": "aa8976a0-f393-45ce-afc1-8054b902a900"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "33.0.0"
+          }
+        }
+      ]
+    ]
   }
 }
